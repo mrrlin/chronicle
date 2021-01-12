@@ -193,8 +193,13 @@ body {
     width: 44px;
     height: 48px;
 
+    @include media-breakpoint-down(sm) {
+        margin-top: -32px;
+        width: 36px;
+        height: 39px;
+    }
     @include media-breakpoint-down(xs) {
-        margin: -28px 0 0px 34px;
+        margin-left: 0;
         width: 36px;
         height: 39px;
     }
@@ -216,11 +221,6 @@ body {
         @include media-breakpoint-down(lg) {
             margin-top: 0px;
         }
-        /*
-        @include media-breakpoint-down(sm) {
-        }
-        @include media-breakpoint-down(xs) {
-        }*/
     }
 
     @include media-breakpoint-down(lg) {
@@ -232,8 +232,8 @@ body {
     @include media-breakpoint-down(sm) {
         font-size: 1.6rem;
     }
-    @include media-breakpoint-down(md) {
-        font-size: 1.6rem;
+    @include media-breakpoint-down(xs) {
+        font-size: 1.2rem;
     }
 }
 .name-text {
@@ -306,7 +306,7 @@ body {
     }
     @include media-breakpoint-down(xs) {
         margin-top: 40px;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 }
 .main-text-second {
@@ -318,7 +318,7 @@ body {
         font-size: 1.4rem;
     }
     @include media-breakpoint-down(xs) {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 }
 .img-text-r {

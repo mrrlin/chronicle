@@ -3662,9 +3662,14 @@ body {
   margin: -32px 0 0px 34px;
   width: 44px;
   height: 48px; }
+  @media (max-width: 1019.98px) {
+    .tree {
+      margin-top: -32px;
+      width: 36px;
+      height: 39px; } }
   @media (max-width: 575.98px) {
     .tree {
-      margin: -28px 0 0px 34px;
+      margin-left: 0;
       width: 36px;
       height: 39px; } }
 
@@ -3679,12 +3684,7 @@ body {
     text-decoration: underline;
     color: #000000; }
   .ref-back .ref-back-text {
-    margin-top: 23px;
-    /*
-        @include media-breakpoint-down(sm) {
-        }
-        @include media-breakpoint-down(xs) {
-        }*/ }
+    margin-top: 23px; }
     @media (max-width: 1599.98px) {
       .ref-back .ref-back-text {
         margin-top: 0px; } }
@@ -3697,9 +3697,9 @@ body {
   @media (max-width: 1019.98px) {
     .ref-back {
       font-size: 1.6rem; } }
-  @media (max-width: 1299.98px) {
+  @media (max-width: 575.98px) {
     .ref-back {
-      font-size: 1.6rem; } }
+      font-size: 1.2rem; } }
 
 .name-text {
   font-family: "SourceSerifVariable-Roman";
@@ -3769,7 +3769,7 @@ body {
   @media (max-width: 575.98px) {
     .main-text-first {
       margin-top: 40px;
-      font-size: 0.9rem; } }
+      font-size: 1.1rem; } }
 
 .main-text-second {
   font-family: "SourceSerifVariable-Roman";
@@ -3783,7 +3783,7 @@ body {
       font-size: 1.4rem; } }
   @media (max-width: 575.98px) {
     .main-text-second {
-      font-size: 0.9rem; } }
+      font-size: 1.1rem; } }
 
 .img-text-r {
   height: 230px;
@@ -3855,7 +3855,7 @@ body {
         background: linear-gradient(to top, #e6d6c6, #e5d4c2, #e4d5c2, #e2d1bd, #e0ceb6, #ddc9af, #dcc7ab, #dac5a6);
         box-shadow: 0 0.2em 5px rgba(122, 123, 123, 0.6);
         border-radius: 50px !important;
-        font-size: 0.8rem; } }
+        font-size: 0.9rem; } }
   .buttons .bottom-button {
     width: 585px;
     height: 43px;
@@ -3890,7 +3890,7 @@ body {
         background: linear-gradient(to top, #e6d6c6, #e5d4c2, #e4d5c2, #e2d1bd, #e0ceb6, #ddc9af, #dcc7ab, #dac5a6);
         box-shadow: 0 0.2em 5px rgba(122, 123, 123, 0.6);
         border-radius: 50px !important;
-        font-size: 0.8rem; } }
+        font-size: 0.9rem; } }
   @media (max-width: 575.98px) {
     .buttons {
       margin-top: 30px; } }
