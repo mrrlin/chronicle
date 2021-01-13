@@ -3540,12 +3540,14 @@ a.text-dark:hover, a.text-dark:focus {
 /*buttons*/
 /*for images in text content*/
 body {
-  background: url(img/backgr_body.jpg); }
+  background: url(img/backgr_body.jpg);
+  background-position: center; }
 
 /*header*/
 .header {
   background: url(img/backgr_header.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
   height: 200px; }
   @media (max-width: 1299.98px) {
     .header .row {
@@ -3657,6 +3659,18 @@ body {
   @media (max-width: 1299.98px) {
     .small-info {
       margin: 0; } }
+
+@media (max-width: 1599.98px) {
+  .icon-text {
+    text-align: left !important; } }
+
+@media (max-width: 1019.98px) {
+  .icon-text {
+    text-align: center !important; } }
+
+@media (max-width: 575.98px) {
+  .icon-text {
+    text-align: center !important; } }
 
 .tree {
   margin: -32px 0 0px 34px;
@@ -3924,6 +3938,8 @@ body {
       .footer .footer-line-img {
         width: 320px;
         height: 36px; } }
+  .footer .ref-library:hover {
+    text-decoration: none; }
   .footer .footer-text {
     color: #6d5546;
     font-size: 0.8rem;
@@ -3933,12 +3949,6 @@ body {
         display: flex;
         justify-content: center;
         margin-top: 10px; } }
-    @media (max-width: 1019.98px) {
-      .footer .footer-text {
-        font-size: 0.6rem; } }
-    @media (max-width: 575.98px) {
-      .footer .footer-text {
-        font-size: 0.4rem; } }
   @media (max-width: 575.98px) {
     .footer {
       margin-top: 30px; } }
