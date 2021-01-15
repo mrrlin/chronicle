@@ -65,6 +65,12 @@ body {
     background-size: cover;
     background-position: center;
     height: 200px;
+    .container {
+        min-width: 100%;
+        .row {
+            min-width: 100%;
+        }
+    }
 
     @include media-breakpoint-down(md) {
         .row {
@@ -92,22 +98,17 @@ body {
         @include media-breakpoint-down(md) {
             font-size: 3.6rem;
             top: 18px;
-            margin: auto;
-            left: 0;
-            right: 0;
+            text-align: center;
         }
         @include media-breakpoint-down(sm) {
             font-size: 2.8rem;
             top: 60px;
-            margin: auto;
             left: 0;
-            right: 0;
         }
         @include media-breakpoint-down(xs) {
             font-size: 1.8rem;
             top: 80px;
-            display: flex;
-            justify-content: center;
+            left: 0;
         }
     }
 }
@@ -153,6 +154,68 @@ body {
         }
     }
 }
+
+/*menu mobile*/
+.menu-mobile {
+    .menu-triger {
+        display: block;
+        width: 25px;
+        height: 15px;   
+        background: url(../img/menu.svg) 0 0 repeat;
+        position: absolute;
+        left: 15px;
+        top: 28px;
+    }   
+    .menu-close {
+        display: block;
+        width: 28px;
+        height: 28px;   
+        background: url(../img/close.svg) 0 0 repeat;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 100;
+    }
+    .menu-popup {
+        display: none;  
+        background: #e6d6c6;
+        position: absolute;
+        top: 0;
+        width: 225px;
+        box-sizing: border-box;
+        padding: 25px;
+        z-index: 9999;  
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.15);
+    }
+    .menu-popup ul {
+        margin: 0;
+        padding: 0;
+    }
+    .menu-popup li {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+    }
+    .menu-popup li a {
+        font-size: 1.4rem;  
+        font-family: $fontOtherText;
+        color: #6d5546;
+        line-height: 1.4;   
+        text-decoration: none;
+    }
+    .body_pointer * {
+        cursor: pointer;
+    }
+
+    @include media-breakpoint-down(xl) {
+        display: none;
+    }
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+}
+
 /*content*/
 .content {
     display: block;
@@ -207,7 +270,7 @@ body {
     height: 48px;
 
     @include media-breakpoint-down(sm) {
-        margin-top: -32px;
+        margin: -32px 0 0 0;
         width: 36px;
         height: 39px;
     }
