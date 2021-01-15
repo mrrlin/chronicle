@@ -8,7 +8,8 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: './index.js'
+        main: './index.js',
+        func: './js/main.js'
     },
     output: {
         filename: '[name].[contenthash].js',
