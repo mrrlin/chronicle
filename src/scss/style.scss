@@ -155,64 +155,122 @@ body {
     }
 }
 
-/*menu mobile*/
-.menu-mobile {
-    .menu-triger {
+$primary-color: #5a4544;
+$space-m: 16px;
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  left: 0;
+  right: 0;
+  margin-top: -1px;
+  padding: 0 $space-m;
+  background-color: $primary-color;
+  height: 50px;
+  z-index: 9999999;
+  
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    transition: .4s;
+  }
+  
+  &__icon {
+    display: block;
+    position: relative;
+    background: #f3edef;
+    width: 90%;
+    height: 4px;
+    transition: .4s;
+
+    &::after,
+    &::before {
+        content: "";
         display: block;
-        width: 25px;
-        height: 15px;   
-        background: url(../img/menu.svg) 0 0 repeat;
         position: absolute;
-        left: 15px;
-        top: 28px;
-    }   
-    .menu-close {
-        display: block;
-        width: 28px;
-        height: 28px;   
-        background: url(../img/close.svg) 0 0 repeat;
-        background-repeat: no-repeat;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        z-index: 100;
+        background: #f3edef;
+        width: 100%;
+        height: 4px;
+        transition: .4s;
     }
-    .menu-popup {
-        display: none;  
-        background: #e6d6c6;
-        position: absolute;
-        top: 0;
-        width: 225px;
-        box-sizing: border-box;
-        padding: 25px;
-        z-index: 9999;  
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.15);
+    &::after {
+      top: 8px;
     }
-    .menu-popup ul {
-        margin: 0;
-        padding: 0;
+    &::before {
+      top: -8px;
     }
-    .menu-popup li {
-        list-style: none;
-        margin: 10px 0;
-        padding: 0;
-    }
-    .menu-popup li a {
-        font-size: 1.4rem;  
-        font-family: $fontOtherText;
-        color: #6d5546;
-        line-height: 1.4;   
-        text-decoration: none;
-    }
-    .body_pointer * {
-        cursor: pointer;
+  }
+  .menu-title {
+      color: #f3edef;
+      display: flex;
+      margin-left: 40px;
+      position: absolute;
+      top: -7px;
+      font-size: 0.9rem;
+      font-family: $fontOtherText;
+  }
+  &__container {
+    position: absolute;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    top: 245px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    height: 0;
+    opacity: 1;
+    transition: .5s;
+    transition-delay: .2s;
+    overflow: hidden;
+    background-color: $primary-color;
+  }
+  
+  &__list {
+    transition: .5s;
+    transition-delay: .5s;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    padding-left: 58px;
+  }
+
+  &__item {
+    font-size: 1rem;
+    padding-bottom: 10px;
+    font-family: $fontOtherText;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #f3edef;
+  }
+ 
+  &__checkbox {
+      display: none;
+
+      &:checked ~ {
+          .mobile-menu {
+              &__container {
+                height: 45%;
+                transition-delay: 0s;
+              }
+          }
+      }
     }
 
     @include media-breakpoint-down(xl) {
         display: none;
     }
     @include media-breakpoint-down(sm) {
-        display: block;
+        display: flex !important;
     }
 }
 
@@ -269,13 +327,16 @@ body {
     width: 44px;
     height: 48px;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
         margin: -32px 0 0 0;
         width: 36px;
         height: 39px;
     }
+    @include media-breakpoint-down(sm) {
+        width: 36px;
+        height: 39px;
+    }
     @include media-breakpoint-down(xs) {
-        margin-left: 0;
         width: 36px;
         height: 39px;
     }

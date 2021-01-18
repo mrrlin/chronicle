@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     alert('Ваша версия jQuery ' + jQuery.fn.jquery);
 });
 
@@ -9,7 +9,7 @@ $(function() {
 		$('body').addClass('body_pointer');		
 		$menu_popup.show(0);
 		$menu_popup.animate(
-			{left: parseInt($menu_popup.css('left'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+			{top: parseInt($menu_popup.css('top'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
 			300
 		);
 		return false;
@@ -18,7 +18,7 @@ $(function() {
 	$(".menu-close").click(function(){
 		$('body').removeClass('body_pointer');		
 		$menu_popup.animate(
-			{left: parseInt($menu_popup.css('left'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+			{top: parseInt($menu_popup.css('top'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
 			300, 
 			function(){
 				$menu_popup.hide(0);
@@ -31,7 +31,7 @@ $(function() {
 		if (!$(e.target).closest('.menu-popup').length){
 			$('body').removeClass('body_pointer');
 			$menu_popup.animate(
-				{left: parseInt($menu_popup.css('left'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+				{top: parseInt($menu_popup.css('top'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
 				300, 
 				function(){
 					$menu_popup.hide(0);
@@ -39,4 +39,4 @@ $(function() {
 			);
 		}
 	});
-});
+});*/

@@ -4,6 +4,21 @@ html(lang="ru")
     include ./components/head.pug
     body
         include ./components/header.pug
+        .mobile-menu
+            input.mobile-menu__checkbox(type="checkbox" id="checkbox")
+            label.mobile-menu__btn(for="checkbox")
+                .mobile-menu__icon
+                    p.menu-title МЕНЮ
+            .mobile-menu__container
+                ul.mobile-menu__list
+                    li.mobile-menu__item
+                        a.mobile-menu__link(href="#") Home
+                    li.mobile-menu__item
+                        a.mobile-menu__link(href="#") Пункт
+                    li.mobile-menu__item
+                        a.mobile-menu__link(href="#") Пункт 2
+                    li.mobile-menu__item
+                        a.mobile-menu__link(href="#") Пункт 3
         .content.mx-auto
             .container
                 .row
