@@ -3541,7 +3541,8 @@ a.text-dark:hover, a.text-dark:focus {
 /*for images in text content*/
 body {
   background: url(img/backgr_body.jpg);
-  background-position: center; }
+  background-position: center;
+  background-size: cover; }
 
 /*header*/
 .header {
