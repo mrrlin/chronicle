@@ -100,16 +100,22 @@ body {
             font-size: 3.6rem;
             top: 18px;
             text-align: center;
+            left: 0;
+            right: 0;
         }
         @include media-breakpoint-down(sm) {
             font-size: 2.8rem;
             top: 60px;
+            margin: auto;
             left: 0;
+            right: 0;
         }
         @include media-breakpoint-down(xs) {
             font-size: 1.8rem;
             top: 80px;
+            margin: auto;
             left: 0;
+            right: 0;
         }
     }
 }
@@ -592,7 +598,6 @@ $space-m: 16px;
         @include media-breakpoint-down(md) {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
         }
     }
 
